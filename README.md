@@ -36,5 +36,5 @@ This repository is my **portfolio**, where I showcase my projects, skills, and o
 ## 📫 Connect with Me  
 📧 Email: ishikabhatia01@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/ishika-bhatia-15a93929b)  
-🔗 [GitHub](https://github.com/your-username)  
+🔗 [GitHub](https://github.com/Ishika5698)  
 
