@@ -29,7 +29,7 @@ This repository is my **portfolio**, where I showcase my projects, skills, and o
 ### 2️⃣ **LLM-Augmented Code Translation System**  
 🔹 Developed an AI-powered tool for **C++ ↔ Rust** code translation.  
 🔹 Reduced latency by **65%** using Rust optimizations.  
-🔹 **200+ GitHub stars** and active contributors!  
+
 
 ---
 
