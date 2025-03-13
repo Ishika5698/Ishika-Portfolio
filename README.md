@@ -1,40 +1,22 @@
-# Ishika Bhatia - Portfolio 🚀  
+# 💫 About Me:
+🔭 I'm currently working on Integrating AWS services into full stack applications for improved scalability and performance, while advancing my compiler project for JavaScript to TypeScript translation.<br><br>👯 I'm looking to collaborate on Enterprise-level web applications, cloud architecture solutions, or innovative compiler and language tooling projects that solve real-world problems.<br><br>🤝 I'm looking for help with Advanced AWS service configurations, optimizing database performance at scale, and enhancing static analysis techniques for my compiler work.<br><br>🌱 I'm currently learning Advanced cloud architecture patterns, serverless computing strategies, and compiler optimization techniques to build more efficient systems.<br><br>💬 Ask me about Building secure and scalable web applications, implementing comprehensive AWS solutions, or source-to-source compilation techniques.<br><br>⚡ Fun fact I've combined my full stack and compiler experience to build developer tools that have reduced our team's code review time by 40%!
 
-👋 Hi! I’m **Ishika Bhatia**, a passionate software engineer specializing in Rust, compilers, and software development.  
-This repository is my **portfolio**, where I showcase my projects, skills, and open-source contributions.  
 
----
+## 🌐 Socials:
+[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/Ishika09174) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/www.linkedin.com/in/ishika-bhatia-15a93929b) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:ishikabhatia01@gmail.com) 
 
-## 🌟 About Me  
-- 🎓 **Master's in Computer Science** from Queen Mary University of London  
-- 💻 **3+ years** of experience in Rust, programming language design, and compiler development  
-- 🚀 Passionate about **source-to-source compilers, machine learning for code, and formal verification**  
+# 💻 Tech Stack:
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=flat-square&logo=.net&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=flat-square&logo=render&logoColor=white) ![OpenStack](https://img.shields.io/badge/Openstack-%23f01742.svg?style=flat-square&logo=openstack&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat-square&logo=php&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=flat-square&logo=google-cloud&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=flat-square&logo=microsoftazure&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white) ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=flat-square&logo=angularjs&logoColor=white) ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=flat-square&logo=angular&logoColor=white) ![Apache Hadoop](https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=flat-square&logo=apachehadoop&logoColor=black) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=flat-square&logo=vuedotjs&logoColor=%234FC08D) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=flat-square&logo=SASS&logoColor=white) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=flat-square&logo=Amazon%20DynamoDB&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=flat-square&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat-square&logo=mongodb&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=flat-square&logo=microsoft%20sql%20server&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat-square&logo=scipy&logoColor=%white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat-square&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat-square&logo=TensorFlow&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=flat-square&logo=gitlab&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat-square&logo=githubactions&logoColor=white) ![Analogue](https://img.shields.io/badge/Analogue-1A1A1A?style=flat-square&logo=Analogue&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Ishika5698&theme=date_night&hide_border=true&include_all_commits=true&count_private=true)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=Ishika5698&theme=date_night&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Ishika5698&theme=date_night&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
----
-
-## 🛠️ Skills  
-✅ Rust, Python, TypeScript, C++, Haskell  
-✅ Compiler Development, Static Analysis, Code Generation  
-✅ Machine Learning for Code, AST Transformations, Formal Verification  
-✅ Git, Docker, AWS, GitHub Actions  
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=Ishika5698&icon=0&color=0)](https://visitcount.itsvg.in)
 
-## 📂 Featured Projects  
-### 1️⃣ **Advanced Source-to-Source Compiler**  
-🔹 Built a Rust-based compiler translating JavaScript to TypeScript with 92% accuracy.  
-🔹 Utilized **Tree-sitter & ANTLR** for parsing and AST manipulation.  
-🔹 Contributed to **open-source** repositories.  
-
-### 2️⃣ **LLM-Augmented Code Translation System**  
-🔹 Developed an AI-powered tool for **C++ ↔ Rust** code translation.  
-🔹 Reduced latency by **65%** using Rust optimizations.  
-
-
----
-
-## 📫 Connect with Me  
-📧 Email: ishikabhatia01@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/ishika-bhatia-15a93929b)  
-🔗 [GitHub](https://github.com/Ishika5698)  
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
