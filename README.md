@@ -1,10 +1,15 @@
 💫 About Me:
 
 🔭 I am currently working on integrating AWS services into full-stack applications to enhance scalability and performance, while advancing my compiler project for translating JavaScript to TypeScript. I also crafted my Netflix-inspired portfolio at https://ishikabportfolio.netlify.app/ to showcase my skills and projects.
+
 👯 I am open to collaborating on enterprise-level web applications, cloud architecture solutions, or innovative compiler and language tooling projects that address real-world challenges.
+
 🤝 I am seeking assistance with advanced AWS service configurations, optimizing database performance at scale, and improving static analysis techniques for my compiler development.
+
 🌱 I am currently exploring advanced cloud architecture patterns, serverless computing strategies, and compiler optimization techniques to create more efficient systems.
+
 💬 Feel free to ask me about building secure and scalable web applications, implementing comprehensive AWS solutions, or mastering source-to-source compilation techniques—and check out my portfolio for more!
+
 ⚡ Fun fact: I've leveraged my full-stack and compiler skills to develop tools that have cut our team’s code review time by 40%, and my portfolio reflects that creativity!
 
 ## 🌐 Socials:
