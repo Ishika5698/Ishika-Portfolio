@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Bhatia - Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            color: #fff;
+            background-color: #000;
+            min-height: calc(100vh - 60px);
+        }
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #ff0000;
+            text-align: center;
+        }
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .skill-tile {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .skill-tile:hover {
+            transform: scale(1.05);
+        }
+        .skill-tile .skill-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            cursor: default;
+        }
+        .skill-tile .skill-button::before {
+            content: "⚙";
+            margin-right: 8px;
+            font-size: 1.2em;
+            color: #ff0000;
+        }
+        .skill-tile .skill-category {
+            font-size: 0.9em;
+            color: #ccc;
+            display: block;
+            margin-top: 5px;
+        }
+        .skill-tile .skill-button.python::before { content: "🐍"; }
+        .skill-tile .skill-button.expressjs::before { content: "🚀"; }
+        .skill-tile .skill-button.angularjs::before { content: "🔧"; }
+        .skill-tile .skill-button.sql::before { content: "📊"; }
+        .skill-tile .skill-button.mongodb::before { content: "🌱"; }
+        .skill-tile .skill-button.django::before { content: "🕸"; }
+        .skill-tile .skill-button.java::before { content: "☕"; }
+        .skill-tile .skill-button.cpp::before { content: "++"; }
+        .skill-tile .skill-button.csharp::before { content: "♯"; }
+        .skill-tile .skill-button.javascript::before { content: "🌐"; }
+        .skill-tile .skill-button.typescript::before { content: "TS"; }
+        .skill-tile .skill-button.react::before { content: "⚛"; }
+        .skill-tile .skill-button.vuejs::before { content: "🌱"; }
+        .skill-tile .skill-button.aws::before { content: "☁"; }
+        .skill-tile .skill-button.azure::before { content: "🌐"; }
+        .skill-tile .skill-button.intellij::before { content: "💡"; }
+        .skill-tile .skill-button.mlops::before { content: "🤖"; }
+        .skill-tile .skill-button.integrationtesting::before { content: "✅"; }
+        .skill-tile .skill-button.rust::before { content: "🦀"; }
+        .skill-tile .skill-button.pytorch::before { content: "🔥"; }
+        .skill-tile .skill-button.nlp::before { content: "🗣"; }
+        .skill-tile .skill-button.llms::before { content: "🧠"; }
+        .skill-tile .skill-button.reasoning::before { content: "💡"; }
+        .skill-tile .skill-button.knowledgebase::before { content: "📚"; }
+        .skill-tile .skill-button.computervision::before { content: "👁"; }
+        .skill-tile .skill-button.sagemaker::before { content: "☁"; }
+        .skill-tile .skill-button.kubernetes::before { content: "📦"; }
+        .skill-tile .skill-button.postgresql::before { content: "📈"; }
+        .skill-tile .skill-button.mysql::before { content: "📊"; }
+        .skill-tile .skill-button.cassandra::before { content: "💾"; }
+        .skill-tile .skill-button.pinecone::before { content: "🌲"; }
+        .skill-tile .skill-button.faiss::before { content: "🔍"; }
+        .skill-tile .skill-button.weaviate::before { content: "🌐"; }
+        .skill-tile .skill-button.git::before { content: "🔧"; }
+        .skill-tile .skill-button.github::before { content: "📦"; }
+        .skill-tile .skill-button.nodejs::before { content: "⬢"; }
+        .skill-tile .skill-button.flask::before { content: "🍶"; }
+        .skill-tile .skill-button.spring::before { content: "🌱"; }
+        .skill-tile .skill-button.restapi::before { content: "🔗"; }
+        .skill-tile .skill-button.gcp::before { content: "🌍"; }
+        .skill-tile .skill-button.sre::before { content: "⏱"; }
+        .skill-tile .skill-button.agile::before { content: "🏃"; }
+        .skill-tile .skill-button.optimization::before { content: "⚡"; }
+        .skill-tile .skill-button.jira::before { content: "✅"; }
+        .skill-tile .skill-button.cudac::before { content: "💾"; }
+        .skill-tile .skill-button.numpy::before { content: "📉"; }
+        .skill-tile .skill-button.pandas::before { content: "📊"; }
+        .skill-tile .skill-button.scikitlearn::before { content: "🔬"; }
+        .skill-tile .skill-button.hypothesis::before { content: "🧪"; }
+        .skill-tile .skill-button.experimentaldesign::before { content: "📋"; }
+        .skill-tile .skill-button.statisticalanalysis::before { content: "📉"; }
+        .skill-tile .skill-button.modelevaluation::before { content: "✅"; }
+        .skill-tile .skill-button.researchpaper::before { content: "📝"; }
+        .skill-tile .skill-button.dynamodb::before { content: "📋"; }
+        .skill-tile .skill-button.cognito::before { content: "🔒"; }
+        .skill-tile .skill-button.ec2::before { content: "🖥"; }
+        .skill-tile .skill-button.s3::before { content: "📦"; }
+        .skill-tile .skill-button.lambda::before { content: "λ"; }
+        .skill-tile .skill-button.helm::before { content: "⛵"; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html" style="font-size: 1.5em; font-weight: bold; color: #ff0000;">ISHIKA BHATIA</a>
+        </div>
+        <div class="nav">
+            <a href="recruiter.html">Home</a>
+            <a href="professional.html">Professional</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact-me.html">Hire Me</a>
+        </div>
+        <div class="profile-icon">
+            <span>😊</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section-title">Backend</div>
+        <div class="skill-grid">
+            <div class="skill-tile">
+                <span class="skill-button python">Python</span>
+                <span class="skill-category">Backend Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button expressjs">Express.js</span>
+                <span class="skill-category">Backend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button angularjs">Angular.js</span>
+                <span class="skill-category">Frontend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button sql">SQL</span>
+                <span class="skill-category">Database Query</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button mongodb">MongoDB</span>
+                <span class="skill-category">NoSQL Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button django">Django</span>
+                <span class="skill-category">Backend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button java">Java</span>
+                <span class="skill-category">Backend Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button cpp">C++</span>
+                <span class="skill-category">Programming Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button csharp">C#</span>
+                <span class="skill-category">Programming Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button rust">Rust</span>
+                <span class="skill-category">Programming Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button flask">Flask</span>
+                <span class="skill-category">Backend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button spring">Spring</span>
+                <span class="skill-category">Backend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button nodejs">Node.js</span>
+                <span class="skill-category">Backend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button restapi">REST APIs</span>
+                <span class="skill-category">Backend Technology</span>
+            </div>
+        </div>
+        <div class="section-title">Frontend</div>
+        <div class="skill-grid">
+            <div class="skill-tile">
+                <span class="skill-button javascript">JavaScript</span>
+                <span class="skill-category">Scripting Language</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button typescript">TypeScript</span>
+                <span class="skill-category">Type-safe JavaScript</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button react">React</span>
+                <span class="skill-category">Frontend Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button vuejs">Vue.js</span>
+                <span class="skill-category">Frontend Framework</span>
+            </div>
+        </div>
+        <div class="section-title">Cloud & DevOps</div>
+        <div class="skill-grid">
+            <div class="skill-tile">
+                <span class="skill-button aws">AWS</span>
+                <span class="skill-category">Cloud Platform</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button azure">Azure</span>
+                <span class="skill-category">Cloud Platform</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button intellij">IntelliJ IDEA</span>
+                <span class="skill-category">IDE</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button mlops">MLOps</span>
+                <span class="skill-category">Machine Learning Operations</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button kubernetes">Kubernetes</span>
+                <span class="skill-category">Container Orchestration</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button docker">Docker</span>
+                <span class="skill-category">Containerization</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button gcp">GCP</span>
+                <span class="skill-category">Cloud Platform</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button sagemaker">SageMaker</span>
+                <span class="skill-category">ML Platform</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button s3">S3</span>
+                <span class="skill-category">Storage Service</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button lambda">Lambda</span>
+                <span class="skill-category">Serverless</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button dynamodb">DynamoDB</span>
+                <span class="skill-category">NoSQL Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button cognito">Cognito</span>
+                <span class="skill-category">Authentication</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button ec2">EC2</span>
+                <span class="skill-category">Compute Service</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button helm">Helm</span>
+                <span class="skill-category">Package Manager</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button git">Git</span>
+                <span class="skill-category">Version Control</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button github">GitHub</span>
+                <span class="skill-category">Collaboration</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button sre">SRE</span>
+                <span class="skill-category">Site Reliability</span>
+            </div>
+        </div>
+        <div class="section-title">Other Tools & Practices</div>
+        <div class="skill-grid">
+            <div class="skill-tile">
+                <span class="skill-button integrationtesting">Integration Testing</span>
+                <span class="skill-category">Testing Practice</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button jira">Jira</span>
+                <span class="skill-category">Defect Tracking</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button numpy">NumPy</span>
+                <span class="skill-category">Data Analysis</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button pandas">Pandas</span>
+                <span class="skill-category">Data Manipulation</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button scikitlearn">scikit-learn</span>
+                <span class="skill-category">Machine Learning</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button pytorch">PyTorch</span>
+                <span class="skill-category">ML Framework</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button nlp">NLP</span>
+                <span class="skill-category">Natural Language Processing</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button llms">LLMs</span>
+                <span class="skill-category">Large Language Models</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button reasoning">Reasoning Models</span>
+                <span class="skill-category">AI Technique</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button knowledgebase">Knowledge-Base Systems</span>
+                <span class="skill-category">AI System</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button computervision">Computer Vision</span>
+                <span class="skill-category">AI Technology</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button hypothesis">Hypothesis Formation</span>
+                <span class="skill-category">Research Method</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button experimentaldesign">Experimental Design</span>
+                <span class="skill-category">Research Method</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button statisticalanalysis">Statistical Analysis</span>
+                <span class="skill-category">Research Method</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button modelevaluation">Model Evaluation</span>
+                <span class="skill-category">Research Method</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button researchpaper">Research Paper Implementation</span>
+                <span class="skill-category">Research Practice</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button cudac">CUDA</span>
+                <span class="skill-category">Parallel Computing</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button agile">Agile</span>
+                <span class="skill-category">Methodology</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button optimization">Optimization</span>
+                <span class="skill-category">Practice</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button postgresql">PostgreSQL</span>
+                <span class="skill-category">SQL Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button mysql">MySQL</span>
+                <span class="skill-category">SQL Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button cassandra">Cassandra</span>
+                <span class="skill-category">NoSQL Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button pinecone">Pinecone</span>
+                <span class="skill-category">Vector Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button faiss">Faiss</span>
+                <span class="skill-category">Vector Database</span>
+            </div>
+            <div class="skill-tile">
+                <span class="skill-button weaviate">Weaviate</span>
+                <span class="skill-category">Vector Database</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Bhatia - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            color: #fff;
+            background-color: #000;
+            min-height: calc(100vh - 60px);
+        }
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #ff0000;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .project-tile {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .project-tile:hover {
+            transform: scale(1.05);
+        }
+        .project-tile h3 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            color: #ff0000;
+        }
+        .project-tile p {
+            font-size: 0.9em;
+            margin: 5px 0;
+            color: #ccc;
+        }
+        .tech-stack {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .tech-stack .tech-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 0.8em;
+            cursor: default;
+        }
+        .tech-stack .tech-button::before {
+            content: "⚙"; /* Default icon (gear) - can be customized per tech */
+            margin-right: 5px;
+            font-size: 1em;
+        }
+        /* Custom icons for specific technologies */
+        .tech-stack .tech-button.reactjs::before { content: "⚛"; }
+        .tech-stack .tech-button.vuejs::before { content: "🌱"; }
+        .tech-stack .tech-button.nodejs::before { content: "⬢"; }
+        .tech-stack .tech-button.java::before { content: "☕"; }
+        .tech-stack .tech-button.python::before { content: "🐍"; }
+        .tech-stack .tech-button.rust::before { content: "🦀"; }
+        .tech-stack .tech-button.aws::before { content: "☁"; }
+        .tech-stack .tech-button.gcp::before { content: "🌐"; }
+        .tech-stack .tech-button.docker::before { content: "🐳"; }
+        .tech-stack .tech-button.kubernetes::before { content: "📦"; }
+        .tech-stack .tech-button.firebase::before { content: "🔥"; }
+        .tech-stack .tech-button.websockets::before { content: "📡"; }
+        .tech-stack .tech-button.cpp::before { content: "++"; }
+        .tech-stack .tech-button.csharp::before { content: "♯"; }
+        .tech-stack .tech-button.typescript::before { content: "TS"; }
+        .tech-stack .tech-button.jira::before { content: "✅"; }
+        .tech-stack .tech-button.dynamics::before { content: "📊"; }
+        .tech-stack .tech-button.computervision::before { content: "👁"; }
+        .tech-stack .tech-button.biencoders::before { content: "🔍"; }
+        .tech-stack .tech-button.neuralnetworks::before { content: "🧠"; }
+        .tech-stack .tech-button.cnn::before { content: "📷"; }
+        .tech-stack .tech-button.transformers::before { content: "🔧"; }
+        .tech-stack .tech-button.browserextension::before { content: "🌐"; }
+        .tech-stack .tech-button.abtesting::before { content: "📈"; }
+        .tech-stack .tech-button.pytorch::before { content: "🔥"; }
+        .tech-stack .tech-button.mongodb::before { content: "🌱"; }
+        .tech-stack .tech-button.rag::before { content: "📚"; }
+        .tech-stack .tech-button.ocr::before { content: "📝"; }
+        .tech-stack .tech-button.llm::before { content: "🧠"; }
+        .tech-stack .tech-button.spring::before { content: "🌱"; }
+        .tech-stack .tech-button.dynamodb::before { content: "📋"; }
+        .tech-stack .tech-button.s3::before { content: "📦"; }
+        .tech-stack .tech-button.lambda::before { content: "λ"; }
+        .tech-stack .tech-button.helm::before { content: "⛵"; }
+        .tech-stack .tech-button.postgresql::before { content: "📈"; }
+        .tech-stack .tech-button.financialapi::before { content: "💰"; }
+        .tech-stack .tech-button.prometheus::before { content: "📊"; }
+        .tech-stack .tech-button.grafana::before { content: "📉"; }
+        .tech-stack .tech-button.githubactions::before { content: "⚡"; }
+        .tech-stack .tech-button.terraform::before { content: "🛠"; }
+        .tech-stack .tech-button.personalize::before { content: "🎯"; }
+        .tech-stack .tech-button.cognito::before { content: "🔒"; }
+        .tech-stack .tech-button.matplotlib::before { content: "📊"; }
+        .tech-stack .tech-button.yahoofinance::before { content: "💹"; }
+        .tech-stack .tech-button.plaid::before { content: "🏦"; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html" style="font-size: 1.5em; font-weight: bold; color: #ff0000;">ISHIKA BHATIA</a>
+        </div>
+        <div class="nav">
+            <a href="recruiter.html">Home</a>
+            <a href="professional.html">Professional</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact-me.html">Hire Me</a>
+        </div>
+        <div class="profile-icon">
+            <span>😊</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section-title">Projects</div>
+        <div class="project-grid">
+            <!-- New Projects -->
+            <div class="project-tile">
+                <h3>Serverless Online Learning Platform with AWS Automation</h3>
+                <p>Mar 2024 – May 2024</p>
+                <p>Created a serverless learning platform using React.js, AWS Lambda, DynamoDB, and API Gateway. Achieved ~25% reduction in infrastructure costs through efficient use of AWS services. Secured content delivery via S3 and applied role-based access control. Planned CI/CD integration for zero-downtime deployments.</p>
+                <div class="tech-stack">
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button aws">AWS</span>
+                    <span class="tech-button lambda">Lambda</span>
+                    <span class="tech-button dynamodb">DynamoDB</span>
+                    <span class="tech-button aws">API Gateway</span>
+                    <span class="tech-button s3">S3</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>E-Commerce Platform with AI-Powered Recommendations</h3>
+                <p>Nov 2023 – Jan 2024</p>
+                <p>Built a cloud-native e-commerce app using React.js, Node.js, and AWS. Integrated AWS Cognito for authentication and Amazon Personalize for product recommendations. Improved page load speed by ~50% through frontend and API optimization. Executed basic CI/CD workflows and enforced security best practices.</p>
+                <div class="tech-stack">
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button nodejs">Node.js</span>
+                    <span class="tech-button aws">AWS</span>
+                    <span class="tech-button cognito">Cognito</span>
+                    <span class="tech-button personalize">Amazon Personalize</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Trading Bot with Real-Time Strategy Execution</h3>
+                <p>Sep 2023 – Nov 2023</p>
+                <p>Developed a Python-based trading bot using financial APIs to automate trades based on market signals. Applied basic risk management, including stop-loss and dynamic position sizing. Conducted backtesting with historical data and visualized results using Matplotlib. Simulated performance tracking with ROI and trade win/loss ratio analytics.</p>
+                <div class="tech-stack">
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button financialapi">Financial APIs</span>
+                    <span class="tech-button matplotlib">Matplotlib</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>FinTech Portfolio Tracker with Real-Time Analytics</h3>
+                <p>Jan 2024 – Mar 2024</p>
+                <p>Building a personal finance dashboard using React.js, Node.js, and PostgreSQL. Fetching live market data via APIs (e.g., Yahoo Finance, Plaid) for dynamic portfolio tracking. Creating dashboards for asset allocation, performance, and tax estimate insights. Planning user authentication and multi-currency support for future expansion.</p>
+                <div class="tech-stack">
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button nodejs">Node.js</span>
+                    <span class="tech-button postgresql">PostgreSQL</span>
+                    <span class="tech-button yahoofinance">Yahoo Finance</span>
+                    <span class="tech-button plaid">Plaid</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>DevOps Dashboard for Monitoring Full-Stack Apps</h3>
+                <p>Mar 2024 – Present</p>
+                <p>Creating a monitoring dashboard using Prometheus, Grafana, and Docker. Containerizing a sample app and deploying via GitHub Actions and Terraform on AWS. Executing real-time alerting, logging, and uptime monitoring. Focused on improving observability and developer operations for production readiness.</p>
+                <div class="tech-stack">
+                    <span class="tech-button prometheus">Prometheus</span>
+                    <span class="tech-button grafana">Grafana</span>
+                    <span class="tech-button docker">Docker</span>
+                    <span class="tech-button githubactions">GitHub Actions</span>
+                    <span class="tech-button terraform">Terraform</span>
+                    <span class="tech-button aws">AWS</span>
+                </div>
+            </div>
+
+            <!-- Existing Projects (Kept) -->
+            <div class="project-tile">
+                <h3>Customer Data Platform with Java & AWS</h3>
+                <p>Mar 2024 – May 2024</p>
+                <p>Developed a customer data platform using Java, Spring Boot, and REST APIs, integrated with AWS (Lambda, DynamoDB, S3) for secure, scalable data management – reducing costs by 25% and ensuring high performance. Deployed via Docker and Kubernetes, achieving sub-100ms response times and 99.9% uptime, meeting SRE standards for 24/7 reliability.</p>
+                <div class="tech-stack">
+                    <span class="tech-button java">Java</span>
+                    <span class="tech-button java">Spring Boot</span>
+                    <span class="tech-button aws">AWS</span>
+                    <span class="tech-button aws">Lambda</span>
+                    <span class="tech-button aws">DynamoDB</span>
+                    <span class="tech-button aws">S3</span>
+                    <span class="tech-button docker">Docker</span>
+                    <span class="tech-button kubernetes">Kubernetes</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Real-Time Financial Dashboard with Spring & GCP</h3>
+                <p>Jan 2024 – Mar 2024</p>
+                <p>Created a responsive dashboard using Java, Spring Web, and GCP, leveraging REST APIs and WebSockets for sub-100ms latency – improving system efficiency by 40%. Containerised with Docker and Helm, ensuring resilience and scalability for financial data access, supporting integrity and performance goals.</p>
+                <div class="tech-stack">
+                    <span class="tech-button java">Java</span>
+                    <span class="tech-button java">Spring Web</span>
+                    <span class="tech-button gcp">GCP</span>
+                    <span class="tech-button websockets">WebSockets</span>
+                    <span class="tech-button docker">Docker</span>
+                    <span class="tech-button kubernetes">Helm</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Visual Context Interpreter</h3>
+                <p>Mar 2024 – Present</p>
+                <p>Developing system that interprets live information on-screen using Python, Rust, and computer vision models. Created custom OCR pipeline with 95% accuracy on complex UI elements, 60% faster extraction. Implementing reasoning layer that contextualizes extracted information and generates actions.</p>
+                <div class="tech-stack">
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button rust">Rust</span>
+                    <span class="tech-button computervision">Computer Vision</span>
+                    <span class="tech-button ocr">OCR</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Advanced Retrieval System</h3>
+                <p>Jan 2024 – Mar 2024</p>
+                <p>Developed high-performance document retrieval system using Rust and Python. Implemented dense passage retrieval with bi-encoders, achieving 87% recall rate. Created hybrid search combining semantic and lexical approaches, improving relevance by 53%.</p>
+                <div class="tech-stack">
+                    <span class="tech-button rust">Rust</span>
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button biencoders">Bi-Encoders</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Reasoning Engine for Financial Analysis</h3>
+                <p>Nov 2023 – Jan 2024</p>
+                <p>Built multi-step reasoning model that analyzes financial data and provides investment recommendations. Combined symbolic reasoning with neural approaches, improving logical consistency by 42%. Achieved 85% accuracy in market trend predictions through hypothesis testing and refinement.</p>
+                <div class="tech-stack">
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button neuralnetworks">Neural Networks</span>
+                    <span class="tech-button financialapi">Financial APIs</span>
+                    <span class="tech-button abtesting">A/B Testing</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Screen Information Extraction System</h3>
+                <p>Sep 2023 – Nov 2023</p>
+                <p>Created system to extract and interpret information from application interfaces. Implemented neural network combining CNNs and transformers with 92% accuracy in UI element identification. Reduced false positives by 68% through iterative experimentation and model refinement.</p>
+                <div class="tech-stack">
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button neuralnetworks">Neural Networks</span>
+                    <span class="tech-button cnn">CNNs</span>
+                    <span class="tech-button transformers">Transformers</span>
+                    <span class="tech-button browserextension">Browser Extension</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>F1 Telemetry Analysis Dashboard</h3>
+                <p>Mar 2024 – May 2024</p>
+                <p>Engineered a real-time dashboard with React.js, TypeScript, and Python (AWS Lambda), processing 10,000+ telemetry data points per second with 99% accuracy, reducing latency by 20%.</p>
+                <div class="tech-stack">
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button typescript">TypeScript</span>
+                    <span class="tech-button python">Python</span>
+                    <span class="tech-button aws">AWS</span>
+                    <span class="tech-button aws">Lambda</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>F1 Race Strategy Simulator</h3>
+                <p>Nov 2023 – Jan 2024</p>
+                <p>Designed a simulator with C# (.NET Core) and React.js, optimizing strategy calculations by 20% across 50+ race scenarios daily, deployed on AWS with 100% uptime.</p>
+                <div class="tech-stack">
+                    <span class="tech-button csharp">C#</span>
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button aws">AWS</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>F1 Pit Stop Coordination Tool</h3>
+                <p>Sep 2023 – Nov 2023</p>
+                <p>Developed a tool with Node.js, TypeScript, and Vue.js, achieving sub-100ms task updates, improving crew coordination by 15% and cutting pit stop errors by 10%.</p>
+                <div class="tech-stack">
+                    <span class="tech-button nodejs">Node.js</span>
+                    <span class="tech-button typescript">TypeScript</span>
+                    <span class="tech-button vuejs">Vue.js</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>F1 Aerodynamics Visualization Tool</h3>
+                <p>Jun 2024 – Aug 2024</p>
+                <p>Built a visualization tool with React.js and Python, rendering aerodynamic data with 95% accuracy, speeding design iterations by 25% and processing 1,000+ simulations monthly.</p>
+                <div class="tech-stack">
+                    <span class="tech-button reactjs">React.js</span>
+                    <span class="tech-button python">Python</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>E-Commerce Platform with Java & AWS</h3>
+                <p>Nov 2023 – Jan 2024</p>
+                <p>Built an e-commerce solution with Java, Spring Boot, and Node.js, deployed on AWS with Kubernetes for 50% faster load times and 99.9% uptime. Integrated AWS Cognito for authentication and REST APIs for seamless payments.</p>
+                <div class="tech-stack">
+                    <span class="tech-button java">Java</span>
+                    <span class="tech-button java">Spring Boot</span>
+                    <span class="tech-button nodejs">Node.js</span>
+                    <span class="tech-button aws">AWS</span>
+                    <span class="tech-button kubernetes">Kubernetes</span>
+                    <span class="tech-button aws">Cognito</span>
+                </div>
+            </div>
+            <div class="project-tile">
+                <h3>Trading Algorithm with Java & Financial APIs</h3>
+                <p>Sep 2023 – Nov 2023</p>
+                <p>Designed a trading algorithm in Java with Spring Data JPA, utilizing financial APIs to optimize trades – boosting efficiency by 35% and reducing volatility by 15%. Deployed on GCP with Docker.</p>
+                <div class="tech-stack">
+                    <span class="tech-button java">Java</span>
+                    <span class="tech-button java">Spring Data JPA</span>
+                    <span class="tech-button gcp">GCP</span>
+                    <span class="tech-button docker">Docker</span>
+                    <span class="tech-button financialapi">Financial APIs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93373323bd766787',t:'MTc0NTE3ODkzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Bhatia - Professional</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            color: #fff;
+            background-color: #000;
+            min-height: calc(100vh - 60px);
+            position: relative;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+            z-index: 0;
+        }
+        .timeline-item {
+            padding: 10px 20px;
+            position: relative;
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 45%;
+            text-align: left;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item.education {
+            background-color: rgba(144, 238, 144, 0.5);
+        }
+        .timeline-item.experience {
+            background-color: rgba(221, 160, 221, 0.5);
+        }
+        .timeline-date {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.2em;
+            margin: 0 0 5px 0;
+            color: #000000;
+        }
+        .timeline-description {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .timeline-description ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .timeline-description li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="professional.html" style="font-size: 1.5em; font-weight: bold; color: #ff0000;">ISHIKA BHATIA</a>
+        </div>
+        <div class="nav">
+            <a href="recruiter.html">Home</a>
+            <a href="professional.html">Professional</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact-me.html">Hire Me</a>
+        </div>
+        <div class="profile-icon">
+            <a href="professional.html"><span>😊</span></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="timeline">
+            <!-- Experience: Freelance Salesforce Developer (Left, Top) -->
+            <div class="timeline-item left experience">
+                <div class="timeline-date">Nov 2024 - Present</div>
+                <div class="timeline-title">Freelance Salesforce Developer | Remote</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>🔧 Developed custom Salesforce solutions for 10+ real estate clients using Apex, Visualforce, and Lightning Web Components, automating lead management to enhance efficiency.</li>
+                        <li>Integrated Salesforce with AWS services like S3 for document storage and Lambda for serverless processing, cutting data retrieval times by 30% and boosting client reporting efficiency.</li>
+                        <li>Created custom objects and workflows for property enquiries, increasing lead conversion rates by 25% through streamlined data capture and follow-up automation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience: Full Stack Developer - Shoora Global Company (Right) -->
+            <div class="timeline-item right experience">
+                <div class="timeline-date">Jun 2021 - Nov 2024</div>
+                <div class="timeline-title">Full Stack Developer - Shoora Global Company</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>🔧 Designed an advanced Content Management System using Flask, enabling 100+ users to manage website content with enhanced features and security.</li>
+                        <li>Deployed the application on AWS and Heroku, ensuring scalability and reliability, resulting in a 30% increase in user engagement and web traffic.</li>
+                        <li>Improved user interaction with JavaScript and jQuery, boosting content update speed by 25% without page reloads.</li>
+                        <li>Delivered a secure CMS that streamlined content management processes, achieving a 20% increase in client content output.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience: Full Stack Developer - Shapoorji Pallonji Group (Left) -->
+            <div class="timeline-item left experience">
+                <div class="timeline-date">Apr 2020 - May 2021</div>
+                <div class="timeline-title">Full Stack Developer - Shapoorji Pallonji Group</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>🔧 Architected and developed an Online Marketplace Platform using TypeScript, Node.js, and React.js, facilitating transactions and enhancing user engagement.</li>
+                        <li>Achieved 30% faster page loads with server-side rendering techniques, optimizing performance and responsiveness.</li>
+                        <li>Pioneered a project management tool with a React/TypeScript frontend and Node.js/Nest.js backend, featuring real-time updates and task assignments.</li>
+                        <li>Leveraged AWS services for storage and content delivery, enhancing the reliability of the platform infrastructure.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education: Queen Mary University of London (Right) -->
+            <div class="timeline-item right education">
+                <div class="timeline-date">Sep 2002 - Jan 2024</div>
+                <div class="timeline-title">Queen Mary University of London</div>
+                <div class="timeline-description">Master of Science in Computer Science 🎓</div>
+            </div>
+
+            <!-- Education: B.K. Birla College of Science, Commerce, and Arts (Left, Bottom) -->
+            <div class="timeline-item left education">
+                <div class="timeline-date">Jul 2018 - May 2021</div>
+                <div class="timeline-title">B.K. Birla College of Science, Commerce, and Arts</div>
+                <div class="timeline-description">Bachelor of Science: Computer Science 🎓</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

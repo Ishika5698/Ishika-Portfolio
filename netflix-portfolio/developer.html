@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Bhatia - Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+        }
+        .profile-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-info h1 {
+            color: #ff0000;
+            font-size: 2.5em;
+        }
+        .profile-info p {
+            font-size: 1.1em;
+            color: #ccc;
+            line-height: 1.5;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #444;
+        }
+        .top-picks {
+            margin-top: 40px;
+        }
+        .top-picks h2 {
+            color: #ff0000;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .pick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .pick-item {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .pick-item:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+        .pick-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .pick-item p {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="developer.html" style="font-size: 1.5em; font-weight: bold; color: #ff0000;">ISHIKA BHATIA</a>
+        </div>
+        <div class="nav">
+            <a href="developer.html">Home</a>
+            <a href="professional.html">Professional</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact-me.html">Hire Me</a>
+        </div>
+        <div class="profile-icon">
+            <a href="developer.html"><span>😊</span></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="profile-info">
+            <h1>Ishika Bhatia - Developer</h1>
+            <p>Highly skilled developer with expertise in full-stack development, specializing in Python, Node.js, TypeScript, React.js, Vue.js, and cloud platforms like AWS. Passionate about creating efficient, secure, and user-friendly applications with a focus on performance optimization and innovative solutions.</p>
+            <div class="buttons">
+                <a href="resume.pdf" target="_blank">Resume</a>
+                <a href="https://www.linkedin.com/in/ishika-bhatia-15a93929b" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="top-picks">
+            <h2>Today's Top Picks for Developer</h2>
+            <div class="pick-grid">
+                <div class="pick-item" onclick="window.location.href='work-permit.html'">
+                    <img src="images/work permit.jpg" alt="Work Permit">
+                    <p>Work Permit</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='skills.html'">
+                    <img src="images/skills.jpg" alt="Skills">
+                    <p>Skills</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='professional.html'">
+                    <img src="images/experience.jpg" alt="Experience">
+                    <p>Professional</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='projects.html'">
+                    <img src="images/projects.jpg" alt="Projects">
+                    <p>Projects</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='contact-me.html'">
+                    <img src="images/contact me.jpg" alt="Contact Me">
+                    <p>Contact Me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933733231a7e5084',t:'MTc0NTE3ODkzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'937540bbf973bfce',t:'MTc0NTgyOTYwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

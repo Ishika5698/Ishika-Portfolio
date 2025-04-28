@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Bhatia - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+        }
+        .profile-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-info h1 {
+            color: #ff0000;
+            font-size: 2.5em;
+        }
+        .profile-info p {
+            font-size: 1.1em;
+            color: #ccc;
+            line-height: 1.5;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #444;
+        }
+        .top-picks {
+            margin-top: 40px;
+        }
+        .top-picks h2 {
+            color: #ff0000;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .pick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .pick-item {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .pick-item:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+        .pick-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .pick-item p {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html" style="font-size: 1.5em; font-weight: bold; color: #ff0000;">ISHIKA BHATIA</a>
+        </div>
+        <div class="nav">
+            <a href="recruiter.html">Home</a>
+            <a href="professional.html">Professional</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact-me.html">Hire Me</a>
+        </div>
+        <div class="profile-icon">
+            <span>😊</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="profile-info">
+            <h1>Ishika Bhatia - Full Stack Developer</h1>
+            <p>Experienced professional with expertise in designing and implementing web applications. Proficient in backend development with Python, Node.js, and TypeScript, coupled with frontend proficiency in React.js and Vue.js, and delivering advanced solutions using AWS and other cloud platforms, enhancing performance, security, and user engagement. Demonstrated expertise in optimizing application efficiency and implementing features.</p>
+            <div class="buttons">
+                <a href="resume.pdf" target="_blank">Resume</a>
+                <a href="https://www.linkedin.com/in/ishika-bhatia-15a93929b" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="top-picks">
+            <h2>Today's Top Picks for Recruiter</h2>
+            <div class="pick-grid">
+                <div class="pick-item" onclick="window.location.href='work-permit.html'">
+                    <img src="images/work permit.jpg" alt="Work Permit">
+                    <p>Work Permit</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='skills.html'">
+                    <img src="images/skills.jpg" alt="Skills">
+                    <p>Skills</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='professional.html'">
+                    <img src="images/experience.jpg" alt="Experience">
+                    <p>Experience</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='projects.html'">
+                    <img src="images/projects.jpg" alt="Projects">
+                    <p>Projects</p>
+                </div>
+                <div class="pick-item" onclick="window.location.href='contact-me.html'">
+                    <img src="images/contact me.jpg" alt="Contact Me">
+                    <p>Contact Me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
